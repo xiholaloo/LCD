@@ -1,18 +1,21 @@
 #include <Arduino.h>
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
 
-// put function declarations here:
-int myFunction(int, int);
+LiquidCrystal_I2C lcd(0x27, 16, 2); // 2 tipe hexa, default 0x27. 0x3f (optional)
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+  Wire.begin(21,22);
+  lcd.init();
+  lcd.backlight();
+  lcd.setCursor(3, 0);
+  lcd.print("KEJURUAN");
+  lcd.setCursor(6, 1);
+  lcd.print("TIK");
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-}
+void loop(){
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+
+
 }
