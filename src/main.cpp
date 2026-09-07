@@ -14,6 +14,7 @@ void setup() {
   lcd.init();
   lcd.backlight();
   dht.begin();
+  
 }
 
 void loop(){
@@ -30,11 +31,12 @@ void loop(){
 
   lcd.setCursor(0,0);
   lcd.print("Suhu:");
-  lcd.print(suhu);
-  lcd.print("°C");
+  lcd.print(suhu, 0);
+  lcd.print((char)223);
+  lcd.print("C");
   lcd.setCursor(0,1);
   lcd.print("kelembaban:");
-  lcd.print(kelembaban);
+  lcd.print(kelembaban, 0);
   lcd.print("%");
   delay(1000);
 }
