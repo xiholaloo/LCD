@@ -8,14 +8,20 @@ void setup() {
   Wire.begin(21,22);
   lcd.init();
   lcd.backlight();
-  lcd.setCursor(3, 0);
-  lcd.print("KEJURUAN");
-  lcd.setCursor(6, 1);
-  lcd.print("TIK");
+
 }
 
 void loop(){
-
-
-
+  lcd.clear();
+  lcd.setCursor(7,0);
+  lcd.print("BLK");
+  lcd.setCursor(4,1);
+  lcd.print("WONOJATI");
+  delay(2000);
+  
+  lcd.setCursor(7,0);
+  lcd.print("IOT");
+  lcd.setCursor(1,1);
+  lcd.print("SMART FARMING");
+  delay(2000);
 }
